@@ -1,15 +1,11 @@
-// renderer.js
-
 let scene = new THREE.Scene();
-scene.background = new THREE.Color(0xffffff);  // Set the background color to white
-
+scene.background = new THREE.Color(0xffffff); // Set the background color to white
 let camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-
 let renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
-fetch('/collection')  // Assuming this endpoint returns the list of boxes
+fetch('/collection')
     .then(response => response.json())
     .then(boxes => {
         boxes.forEach(data => {
@@ -28,7 +24,13 @@ fetch('/collection')  // Assuming this endpoint returns the list of boxes
             let line = new THREE.LineSegments(edges, new THREE.LineBasicMaterial({color: 0x000000}));
 
             // Adjusting cube's position based on the start coordinates
-            cube.position.set(data.start.x + width/2, data.start.y + height/2, data.start.z + depth/2);
+            let posX = data.start.x + width/2;
+            let posY = data.start.y + height/2;
+            let posZ = data.start.z + depth/2;
+            cube.position.set(posX, posY, posZ);
+
+            // Set the position of the lines to match the cube's position
+            line.position.set(posX, posY, posZ);
 
             // Add both cube and line to a group so they rotate together
             let group = new THREE.Group();
