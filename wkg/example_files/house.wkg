@@ -1,0 +1,43 @@
+# Beams along the length (10m) of the house at intervals of 2 meters across the width
+BOX (0,0,0) (10,0.3,0.3)
+BOX (0,2,0) (10,2.3,0.3)
+BOX (0,4,0) (10,4.3,0.3)
+BOX (0,6,0) (10,6.3,0.3)
+BOX (0,6.7,0) (10,7,0.3)
+
+# Beams along the width (7m) of the house at intervals of 2 meters across the length
+BOX (0,0,0) (0.3,7,0.3)
+BOX (2,0,0) (2.3,7,0.3)
+BOX (4,0,0) (4.3,7,0.3)
+BOX (6,0,0) (6.3,7,0.3)
+BOX (9.7,0,0) (10,7,0.3)
+
+# Planks/Floorboards on top of beams
+
+# Between the 1st and 2nd lengthwise beams
+BOX (0.3,0,0.3) (2,2,0.33)
+BOX (2.3,0,0.3) (4,2,0.33)
+BOX (4.3,0,0.3) (6,2,0.33)
+BOX (6.3,0,0.3) (8,2,0.33)
+BOX (8.3,0,0.3) (10,2,0.33)
+
+# Between the 2nd and 3rd lengthwise beams
+BOX (0.3,2,0.3) (2,4,0.33)
+BOX (2.3,2,0.3) (4,4,0.33)
+BOX (4.3,2,0.3) (6,4,0.33)
+BOX (6.3,2,0.3) (8,4,0.33)
+BOX (8.3,2,0.3) (10,4,0.33)
+
+# Between the 3rd and 4th lengthwise beams
+BOX (0.3,4,0.3) (2,6,0.33)
+BOX (2.3,4,0.3) (4,6,0.33)
+BOX (4.3,4,0.3) (6,6,0.33)
+BOX (6.3,4,0.3) (8,6,0.33)
+BOX (8.3,4,0.3) (10,6,0.33)
+
+# Between the 4th and 5th (last) lengthwise beams
+BOX (0.3,6,0.3) (2,7,0.33)
+BOX (2.3,6,0.3) (4,7,0.33)
+BOX (4.3,6,0.3) (6,7,0.33)
+BOX (6.3,6,0.3) (8,7,0.33)
+BOX (8.3,6,0.3) (10,7,0.33)

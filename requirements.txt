@@ -1,0 +1,7 @@
+pygame>=2.0.1
+click>=8.0.1
+pydantic>=1.8.2
+httpx
+
+pytest
+pytest-regressions
